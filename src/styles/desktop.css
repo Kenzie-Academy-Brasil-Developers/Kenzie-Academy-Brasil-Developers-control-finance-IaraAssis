@@ -1,0 +1,83 @@
+@media (min-width: 700px) {
+
+
+    header {
+
+        padding: 40px;
+        height: 109px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    .header__button {
+        width: 50%;
+    }
+
+    #app {
+
+        max-width: 600px;
+    }
+
+    .container__summary {
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .container__summary>h4 {
+
+        width: 90%;
+    }
+
+    .value__list {
+
+        justify-content: space-around;
+    }
+
+    .value__list>button {
+
+        margin-left: 330px;
+    }
+
+    .modal__controller {
+
+        max-width: 26.75rem;
+        height: 21.875rem;
+        margin: 150px auto;
+    }
+
+    .types__butons {
+
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .types__butons label {
+
+        text-align: center;
+        width: 20%;
+    }
+
+    .insert__value {
+
+        align-items: end;
+        justify-content: end;
+    }
+
+    .insert__value>button {
+
+        width: 25%;
+        margin-top: 25px;
+    }
+    .insertValue{
+        width: 25%;
+
+    }
+}
