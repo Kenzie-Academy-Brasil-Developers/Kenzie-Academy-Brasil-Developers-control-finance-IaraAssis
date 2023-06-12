@@ -89,13 +89,23 @@
 
 }
 
-.notValue {
+.container__notValue{
 
+    width: 100%; 
+    /* max-width: 100px; */
+}
+
+.notValue {
+    width: 100%;
+    /* max-width: 100px; */
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 1px solid var(--color-grey-3);
     border-radius: var(--radius-1);
     background-color: var(--color-grey-4);
-    padding: 15px 82px;
+    padding: 20px;
     border-style: dashed;
 
 }

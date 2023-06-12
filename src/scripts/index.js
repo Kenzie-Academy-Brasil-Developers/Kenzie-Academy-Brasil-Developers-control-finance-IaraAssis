@@ -10,11 +10,12 @@ const summaryExit = document.querySelector('.summary__exit');
 
 
 export const functionSumValues = (array) => {
+    console.log(array)
     const total = array.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0);
     sumValues.innerText = total > 0 ? `R$ ${total.toFixed(2)}` : '00,00';
-
+    console.log(total)
     if (total <= 0) {
-        notValue.style.display = 'block';
+        notValue.style.display = 'flex';
     } else {
         notValue.style.display = 'none';
     }
@@ -65,26 +66,30 @@ export const createObjectList = (array) => {
 createObjectList(insertedValues);
 
 const filterValues = (categoryId) => {
-    const filteredValues = categoryId === 'all' ? insertedValues : insertedValues.filter((item) => item.categoryID === categoryId);
-
+    const filteredValues = categoryId === 'all' ? insertedValues : insertedValues
+    .filter((item) => item.categoryID === categoryId);
+    
     createObjectList(filteredValues);
+    // console.log(filterValues)
+    functionSumValues(filteredValues);
 };
 
 
 summaryAll.addEventListener('click', () => {
     filterValues('all');
-
+    
 });
 
 summaryInput.addEventListener('click', () => {
     filterValues(0);
-
+    
+    
+    
 });
 
 summaryExit.addEventListener('click', () => {
     filterValues(1);
-
+    
 });
 
-functionSumValues(insertedValues);
 
