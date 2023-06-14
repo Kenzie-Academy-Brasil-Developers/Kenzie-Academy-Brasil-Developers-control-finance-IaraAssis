@@ -13,7 +13,7 @@ export const functionSumValues = (array) => {
     console.log(array)
     const total = array.reduce((accumulator, currentValue) => accumulator + currentValue.value, 0);
     sumValues.innerText = total > 0 ? `R$ ${total.toFixed(2)}` : '00,00';
-    console.log(total)
+    
     if (total <= 0) {
         notValue.style.display = 'flex';
     } else {
@@ -52,14 +52,15 @@ export const createObjectList = (array) => {
         imgDump.addEventListener('click', (event) => {
             event.preventDefault()
             const userId = Number(event.target.dataset.userId)
-
-            handleDeleteValue(userId, insertedValues)
-            functionSumValues(insertedValues)
             
-
+            handleDeleteValue(userId, insertedValues)
+            
+            
+            
         })
-
+        
     });
+    functionSumValues(insertedValues)
 };
 
 
@@ -70,7 +71,7 @@ const filterValues = (categoryId) => {
     .filter((item) => item.categoryID === categoryId);
     
     createObjectList(filteredValues);
-    // console.log(filterValues)
+
     functionSumValues(filteredValues);
 };
 
